@@ -1,6 +1,5 @@
-def valuesort(input_dict):
-    return [value for key, value in sorted(input_dict.items())]
+def invertdict(input_dict):
+    return {value: key for key, value in input_dict.items()}
 
-# Example usage
-input_dict = {'b': 2, 'a': 1, 'c': 3}
-print(valuesort(input_dict))  # Output: [1, 2, 3]
+input_dict = {'a': 1, 'b': 2, 'c': 3}
+print(invertdict(input_dict))
