@@ -1,0 +1,22 @@
+def get_letter_combinations(digits, current_combination="", index=0):
+    if index == len(digits):
+        print(current_combination)
+        return
+    digit = digits[index]
+    letters = string_maps.get(digit, "")
+    for letter in letters:
+        get_letter_combinations(digits, current_combination + letter, index + 1)
+string_maps = 
+{
+    "1": "abc",
+    "2": "def",
+    "3": "ghi",
+    "4": "jkl",
+    "5": "mno",
+    "6": "pqrs",
+    "7": "tuv",
+    "8": "wxy",
+    "9": "z"
+}
+input_digits = "23" 
+get_letter_combinations(input_digits)
